@@ -37,7 +37,7 @@ def calculate_rent_fee(date_issued):
         days_borrowed = (datetime.now().date() - date_issued).days
 
 
-        # Fixed rate per day (adjust as needed)
+        # Fixed rate per day 
         fixed_rate_per_day = 200.00
 
         # Calculate the total rent fee
@@ -54,7 +54,7 @@ def return_book(request, transaction_id):
 
     # Check if the book has not been returned yet
     if not transaction.date_returned:
-        # Calculate rent fee (You may have a more complex calculation based on return date)
+        # Calculate rent fee 
         rent_fee = calculate_rent_fee(transaction.date_issued)
 
         # Update transaction details
